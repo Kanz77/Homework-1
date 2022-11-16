@@ -120,6 +120,20 @@ backBtn.addEventListener("click", () => form.classList.remove('secActive'));
 
 
         }
+$(function() {
+    $('#my_form').change(function(){
+        var str = "<em>First name:</em><strong> " + $( "#firstName" ).val() + "</strong><br><em>Middle name:</em><strong> " + $( "#middleInit" ).val() + "</strong><br><em>Last name:</em><strong> " + $( "#lastName" ).val() + "</strong><br><em>DOB:</em><strong> " + $("#dob").val() + "</strong><br><em>Mobile Number</em><strong> " + $( "#mobileNo" ).val() + "</strong><br><em>gender:</em><strong> " + $( "select#gender option:selected" ).text() + "</strong><br><em>Social Security:</em><strong> " + $( "#secno" ).val() + "</strong><br><em>AddressLine1:</em><strong> " + $( "#add1" ).val() + "</strong><br><em>Address Line 2:</em><strong> " + $( "#add2" ).val() + "</strong><br><em>City:</em><strong> " + $( "#city" ).val() +"</strong><br><em>State:</em><strong> " + $( "select#state option:selected" ).text() + "</strong>" + "</strong><br><em>ZipCode:</em><strong> " + $( "#zip" ).val() + "</strong><br><em>email:</em><strong> " + $( "#email" ).val();
+
+        $('#check_before_submit').html( str );
+    });
+
+    $( "#my_form" ).on( "submit", function( event ) {
+        event.preventDefault();
+        var str = "<em>First name:</em><strong> " + $( "#firstName" ).val() + "</strong><br><em>Middle name:</em><strong> " + $( "#middleInit" ).val() + "</strong><br><em>Last name:</em><strong> " + $( "#lastName" ).val() + "</strong><br><em>Middle name:</em><strong> " + $("#dob").val() + "</strong><br><em>Mobile Number</em><strong> " + $( "#mobileNo" ).val() + "</strong><br><em>gender:</em><strong> " + $( "select#gender option:selected" ).text() + "</strong><br><em>Social Security:</em><strong> " + $( "#secno" ).val() + "</strong><br><em>AddressLine1:</em><strong> " + $( "#add1" ).val() + "</strong><br><em>Address Line 2:</em><strong> " + $( "#add2" ).val() + "</strong><br><em>City:</em><strong> " + $( "#city" ).val() +"</strong><br><em>State:</em><strong> " + $( "select#state option:selected" ).text() + "</strong>" + "</strong><br><em>ZipCode:</em><strong> " + $( "#zip" ).val() + "</strong><br><em>email:</em><strong> " + $( "#email" ).val();
+
+        $('#check_before_submit').html( str );
+    });
+});
 
 
 
